@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VIVA — маркетплейс</title>
+<link rel="stylesheet" href="css/main.css">
+<script>try{var t=localStorage.getItem("viva_theme")||"auto";document.documentElement.dataset.theme=t==="dark"||(t==="auto"&&matchMedia("(prefers-color-scheme:dark)").matches)?"dark":"light"}catch(e){}</script>
+</head>
+<body>
+<header class="header">
+  <a class="logo" href="#" id="logo">VIVA<span>✦</span></a>
+  <div class="delivery">🚚 Доставка по всему миру</div>
+  <div class="search-wrap"><div class="search">
+    <input id="searchInput" type="search" autocomplete="off" placeholder="Искать товары...">
+    <button id="searchBtn" aria-label="Поиск">⌕</button>
+  </div><div class="suggest" id="suggest"></div></div>
+  <button class="header-btn" id="userBtn">👤 <span id="userLabel">Войти</span></button>
+  <button class="header-btn" id="favoritesBtn">♡ <span>Избранное</span></button>
+  <button class="cart-btn" id="cartBtn">🛒 <span>Корзина</span><b id="cartCount">0</b></button>
+</header>
+
+<nav class="categories">
+  <a class="active" href="#all" data-cat="all">Все товары</a>
+  <a href="#fashion" data-cat="fashion">Одежда</a>
+  <a href="#home" data-cat="home">Для дома</a>
+  <a href="#beauty" data-cat="beauty">Красота</a>
+  <a href="#gadgets" data-cat="gadgets">Гаджеты</a>
+  <a href="#kids" data-cat="kids">Детям</a>
+  <a href="#accessories" data-cat="accessories">Аксессуары</a>
+</nav>
+
+<main>
+<section class="promo">
+  <div>
+    <small>🔥 ГОРЯЧИЕ ПРЕДЛОЖЕНИЯ</small>
+    <h1>Много вещей.<br><em>Маленькие цены.</em></h1>
+    <p>Находи интересные товары для дома, себя и подарков в одном месте.</p>
+    <a href="#catalog" class="promo-btn">Смотреть товары →</a>
+  </div>
+  <div class="promo-orb">VIVA</div>
+</section>
+
+<section class="catalog" id="catalog">
+  <div class="section-head">
+    <div>
+      <small>ТОЛЬКО СЕГОДНЯ</small>
+      <h2 id="catalogTitle">Хиты продаж 🔥</h2><p id="resCount" class="rescount"></p>
+    </div>
+    <div class="sort">
+      <button class="sort-btn active" data-sort="popular">Популярные</button>
+      <button class="sort-btn" data-sort="price">Дешевле</button>
+    </div>
+  </div>
+  <div class="products" id="products"></div>
+</section>
+</main>
+
+<aside class="cart" id="cart">
+  <div class="cart-head"><h2>Корзина</h2><button id="closeCart" aria-label="Закрыть">×</button></div>
+  <div id="cartItems" class="cart-items"></div>
+  <div class="cart-bottom">
+    <div><span>Итого</span><strong id="cartTotal">0 ₽</strong></div>
+    <button class="checkout" id="checkoutBtn">Перейти к оформлению</button>
+  </div>
+</aside>
+<div class="overlay" id="overlay"></div>
+<div class="modal" id="modal"><div class="modal-box" id="modalBox"></div></div>
+<div class="toast" id="toast"></div>
+
+<footer>
+  <div class="logo">VIVA<span>✦</span></div>
+  <p>Демонстрационный интернет-магазин · 2026</p>
+</footer>
+
+<nav class="mobile-nav">
+  <a class="active" href="#" data-nav="home">⌂<small>Главная</small></a>
+  <a href="#" data-nav="catalog">▦<small>Каталог</small></a>
+  <a href="#" data-nav="fav">♡<small>Избранное</small></a>
+  <a href="#" data-nav="cart">🛒<small>Корзина</small></a>
+  <a href="#" data-nav="profile">👤<small>Профиль</small></a>
+</nav>
+<script src="js/app.js"></script>
+<script src="js/fx.js"></script>
+</body>
+</html>
